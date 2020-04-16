@@ -1,0 +1,35 @@
+#include<stdio.h>
+
+int main()
+{
+	int num = 10;
+	int *pNum;
+
+	pNum = &num;
+	printf("num의 값 : %d\n", num);
+	printf("num의 주소값 : %d\n", &num);
+	printf("pNum의 값 : %d\n", pNum);
+	printf("pNum의 주소값 : %d\n", &pNum);
+	printf("pNum이 가리키는 값 : %d\n", *pNum);
+
+	printf("\n\n=====================================================\n\n");
+
+
+	int *pa;
+	double *pd;
+	float *pf;
+	char *pc;
+	printf("int*의 사이즈 : %d\n", sizeof(pa));
+	printf("double*의 사이즈 : %d\n", sizeof(pd));
+	printf("float*의 사이즈 : %d\n", sizeof(pf));
+	printf("char*의 사이즈 : %d\n", sizeof(pc));
+
+	printf("\n\n=====================================================\n\n");
+
+
+
+
+
+
+
+}
