@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int main()
+{
+	int iArr[10];
+	for (int i = 0; i < 10; i++) {
+		iArr[i] = (i + 1)*5;
+	}
+	printf("iArr의 시작 주소 : %d\n",iArr);
+	printf("iArr[0]의 값 : %d\n",iArr[0]);
+	printf("iArr[0]의 주소값 : %d\n",&iArr[0]);
+	printf("iArr[1]의 주소값 : %d\n",&iArr[3]);
+
+
+	int *pArr;
+	pArr = iArr+2;
+	printf("pArr이 가리키는 값 : %d\n", *pArr);
+
+
+}
