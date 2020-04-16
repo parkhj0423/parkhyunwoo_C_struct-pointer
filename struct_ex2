@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<string.h>
+
+struct Student {
+	char name[20];
+	int mathScore;
+	int engScore;
+	int sciScore;
+	float average;
+};
+
+
+
+
+int main()
+{
+
+	struct Student s1;
+	struct Student s2 = { "lee",90,55,45 };
+	struct Student std[3] = { {"park",84,84,55},{"choi",11,22,33},{"jung",51,23,59} };
+	for (int i = 0; i < 3; i++) {
+		std[i].average = (std[i].mathScore + std[i].engScore + std[i].sciScore) / 3;
+		printf("std[%d]의 평균 : %f\n",i+1, std[i].average);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	strcpy(s1.name, "kim");
+	s1.mathScore = 90;
+	s1.engScore = 85;
+	s1.sciScore = 80;
+    
+	printf("%d %d %d %s\n", s1.mathScore, s1.engScore, s1.sciScore, s1.name);
+	printf("%d %d %d %s\n", s2.mathScore, s2.engScore, s2.sciScore, s2.name);
+
+	
+
+}
