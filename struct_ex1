@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<string.h>
+#define COLD 0 
+#define HOT 1 
+
+typedef struct Cafe {
+	char menuName[20];
+	unsigned int price;
+	int type;
+}Cafe;
+int main()
+{
+	Cafe myCafe[10] = {
+      {"Americano", 2000, COLD},{"Americano", 2300, HOT},
+      {"CafeLatte", 2500, COLD},{"CafeLatte", 2800, HOT},
+      {"LemonAde", 3000, COLD }, {"LemonTea", 3000, HOT},
+      {"Coldbrew", 4000, COLD }, {"Coldbrew", 4500, HOT},
+	  {"SpecialCoffee", 6000, COLD} };
+	int sum=0;
+	float average;
+	int length = strlen(myCafe);
+	
+	for (int i = 0; i < length; i++) {
+		sum += myCafe[i].price;
+		average = sum / length;
+	}
+	printf("음료 값의 평균은 : %.2f 원\n", average);
+
+	for (int i = 0; i < length; i++) {
+		if (myCafe[i].price < 3000) {
+			printf("3000원 미만의 음료 : %s\n", myCafe[i].menuName);
+		}
+	}
+
+
+	       
+	int coldsum = 0;
+	int hotsum = 0;
+	int coldcount = 0;
+	int hotcount = 0;
+	float coldaverage;
+	float hotaverage;
+
+
+	for (int i = 0; i < length; i++) {
+		if (myCafe[i].type == 0) {
+			coldsum += myCafe[i].price;
+			coldcount++;
+		}
+		else {
+			hotsum += myCafe[i].price;
+			hotcount++;
+		}
+	}
+	coldaverage = coldsum / coldcount;
+	hotaverage = hotsum / hotcount;
+	printf("차가운 음료의 평균 값 : %.2f\n", coldaverage);
+	printf("뜨거운 음료의 평균 값 : %.2f\n", hotaverage);
+
+
+}
