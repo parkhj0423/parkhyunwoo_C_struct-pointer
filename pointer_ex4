@@ -1,0 +1,16 @@
+#include<stdio.h>	
+
+
+
+int main()
+{
+	char * pCh = "programming";
+	pCh = "hello";
+	printf("값 확인 : %d\n", pCh);
+	printf("값 확인 : %c\n", *pCh);
+	printf("값 확인 : %s\n", pCh);
+
+
+
+
+}
